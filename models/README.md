@@ -1,0 +1,3 @@
+# About the exported STLs
+
+The exported STL files have a printing tolerance set that is tight for my printer at the time of writing (0.05 mm) in order to achieve a snug fit. Using the STL files directly with a printer that has a larger tolerance will likely result in unusable parts or parts that require significant post processing. If you printer has a larger tolerance, please use the attached f3d files and modify the user parameter for the tolerance, the model should recompute with the new tolerance values for your slicing and printing pleasure.
