@@ -1,20 +1,30 @@
 # OpenDeck
 An open hardware/source 32-key (4x8) macro keypad based on QMK firmware.
 
+# What it looks like?
+
+![image of finished product](images/actual.jpg)
+![render of full product](images/render_full.jpg)
+![render of product without keycaps](images/render_no_caps.jpg)
+![render of product without switches](images/render_no_switches.jpg)
+![render of the back of the product](images/render_back.jpg)
+
 # BOM
+- **READ THE FULL INSTRUCTIONS BEFORE ORDERING PARTS OR BEGINNING ASSEMBLY**
 - 1x PCB including all components from the BOM in the `hardware` folder. It's a good idea to get some spares as it's easy to mess up the assembly.
 - 32x Cherry MX RGB compatible switches (e.g. MX1A-G1NA)
 - 32x Keycaps of your choice (can be 3D printed)
-- 1x 3D printed case body (see models folder)
-- 1x 3D printed switch plate (see models folder)
-- 1x 3D printed front plate (see models folder)
-- 1x 3D printed stand (see models folder)
+- 1x 3D printed case body (see `mechanical/OpenDeck32` folder)
+- 1x 3D printed switch plate (see `mechanical/OpenDeck32` folder)
+- 1x 3D printed front plate (see `mechanical/OpenDeck32` folder)
+- 1x 3D printed stand (see `mechanical/OpenDeck32` folder)
 - 4x M3x0.5 15mm flathead (countersunk) screws
+- 1x USB micro-B cable
 
-For assembly an AVR ISP (Incircuit Serial Programmer) is needed unless the DFU bootloader is already programmed and correct fuses are set on your ATmega32U4 (unlikely). If you don't have an AVR ISP, you can a make a make shift programmer from anybut pay close attention to the wiring, you can destroy the OpenDeck PCB and/or your Arduino if you wire it wrong.
+For assembly an AVR ISP (Incircuit Serial Programmer) is needed unless the DFU bootloader is already programmed and correct fuses are set on your ATmega32U4 (unlikely). If you don't have an AVR ISP, you can a make a make shift programmer from it but pay close attention to the wiring, you can destroy the OpenDeck PCB and/or your Arduino if you wire it wrong.
 
 # Electrical Assembly
-**CAUTION:** The following assembly steps require soldering of Surface Mount Devices (SMDs). Soldering SMD components requires practice and skills, which are outside of scope of these instructions. There are plenty of practice kits around for sale and good instuctions on YouTube (see e.g. EEVBlog). It is very easy to ruin the PCB itself or any of the components by inappropriate soldering technique, **DO NOT ATTEMPT ASSEMBLY IF YOU'RE NOT CONFIDENT WITH SMD SOLDERING**.
+**CAUTION:** The following assembly steps require soldering of Surface Mount Devices (SMDs). If you're unfamiliar with SMD soldering I recommend viewing some tutorials on the topic and maybe purchasing a practice kit online. **DO NOT ATTEMPT ASSEMBLY IF YOU'RE NOT CONFIDENT WITH SMD SOLDERING, YOU ARE VERY LIKELY TO BREAK THE COMPONENTS**.
 
 **CAUTION 2:** When hand soldering TQFP and SSOP chips (the two large ICs on the PCB) it is very easy to bridge the pins with solder (or flux, if you don't use a NO-CLEAN variety) and create a short circuit. This short circuit will most likely cause malfunction and could damage the chip, board or the device it's connected to, please carefully inspect and test each assembled board before powering it on. Flux should be used to make soldering easier of these components and to produce better solder joints. However note that some fluxes are electrically conductive and chemically corrosive and must be thoroughly washed off the board using isopropyl alcohol, carefull scrubbing with a toothbrush and wiping off with a tissue or disposable cloth.
 
@@ -42,7 +52,7 @@ For assembly an AVR ISP (Incircuit Serial Programmer) is needed unless the DFU b
 1. Solder the through hole components **EXCEPT** the key switches, they need to be mounted to the switch plate before soldering and the board must pass electrical testing before we solder them.
 1. Solder the back side SMD components. 
 1. Everything except the RGB LEDs, Switches and Diodes of the keymatrix should now be soldered.
-1. Clean up the board with generous amounts of isopropyl alcohol, gentle scrubbing with a toothbrush (try to reach in between the IC legs with the bristles) and wiping off the excess with tissues. You can check if you have gotten all the flux residue off the board by adding more isopropyl alcohol and and scrubbing carefully but thoroughly with the toothbrush, if the isopropyl alcohol evaporates without leaving a visible stain on the PCB, it is clean (the stain is flux residue).
+1. Clean up the board with generous amounts of isopropyl alcohol, gentle scrubbing with a toothbrush (try to reach in between the IC legs with the bristles) and wiping off the excess with clean tissues. You can check if you have gotten all the flux residue off the board by adding more isopropyl alcohol and and scrubbing carefully but thoroughly with the toothbrush, if the isopropyl alcohol evaporates without leaving a visible stain on the PCB, it is clean (the stain is flux residue).
 
 ## Electrical Verification (Part 1)
 
