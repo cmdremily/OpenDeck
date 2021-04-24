@@ -4,9 +4,13 @@ An open hardware/source 32-key (4x8) macro keypad based on QMK firmware.
 # What it looks like?
 
 ![image of finished product](images/actual.jpg)
+
 ![render of full product](images/render_full.jpg)
+
 ![render of product without keycaps](images/render_no_caps.jpg)
+
 ![render of product without switches](images/render_no_switches.jpg)
+
 ![render of the back of the product](images/render_back.jpg)
 
 # BOM
