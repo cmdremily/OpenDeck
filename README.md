@@ -76,7 +76,7 @@ For assembly an AVR ISP (Incircuit Serial Programmer) is needed unless the DFU b
    - TBD: Add example invocation for AVR ISP under linux
 1. Download the [Atmel DFU bootloader for mega chips](http://ww1.microchip.com/downloads/en/DeviceDoc/megaUSB_DFU_Bootloaders.zip) onto your hard drive and exctract the bootloader for the ATmega32U4.
 1. Using `avrdude` flash the bootloader onto the ATmega32U4. 
-1. Clone https://github.com/EmilyBjoerk/qmk_firmware and `cd` into the directory.
+1. Clone https://github.com/cmdremily/qmk_firmware and `cd` into the directory.
 1. [Install QMK toolbox](https://beta.docs.qmk.fm/cli/cli), we only need the DFU programmer, you can ignore warings about other programmers not being found.
    - Select the cloned repo as your `QMK_HOME`.
 1. [Configure QMK toolbox](https://beta.docs.qmk.fm/cli/cli_configuration), select keyboard `opendeck/32/rev1` and keymap `default`.
